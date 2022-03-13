@@ -1,0 +1,237 @@
+@import url(https://fonts.googleapis.com/earlyaccess/hannari.css);
+
+.pokeIntroduce {
+  margin: 0 auto 300px;
+  width: 1024px;
+  font-family: 'Hannari';
+  background-image: url(../image/wallpaper_00012.jpeg);
+  &__title {
+    margin: 16px 0;
+    width: 960px;
+    text-align: center;
+    font-size: 34px;
+    line-height: 1.5;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #87cefa;
+    &.-min {
+      margin: 0;
+      padding: 8px;
+      font-size: 20px;
+    }
+  }
+  &__menuArea {
+    padding: 24px 8px;
+    width: 960px;
+    line-height: 2;
+    font-weight: 700;
+    border-radius: 10px;
+    background-image: url(../image/ogp.jpeg);
+    background-color: rgba(255, 255, 255, 0.8);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: lighten;
+  }
+  &__menuTitle {
+    font-size: 32px;
+  }
+  &__menuList {
+    color: #668ad8;
+    list-style: inside;
+  }
+  &__subMenu {
+    font-size: 24px;
+  }
+  &__subMenuTitle {
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+  &__subMenuList {
+    padding: 8px 32px;
+    color: #668ad8;
+    list-style: circle;
+    & > li {
+      font-size: 20px;
+    }
+  }
+  &__sectionArea {
+    margin-top: 64px;
+    padding: 8px 16px;
+    width: 960px;
+    border-radius: 20px;
+    background-color: rgba(241, 241, 241, 0.9);
+    background-blend-mode: lighten;
+    // opacity: 0;
+    transition: opacity 1.5s;
+    &.is-fadeIn {
+      opacity: 1;
+    }
+  }
+  &__phaseTitle {
+    margin-top: 36px;
+    line-height: 1.5;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &__phaseMidTitle {
+    margin-top: 64px;
+    padding-top: 16px;
+    line-height: 1.5;
+    font-size: 28px;
+    font-weight: 700;
+    border-top: 1px solid rgb(192, 192, 192);
+  }
+  &__phaseMinArea {
+    margin-top: 20px;
+    padding: 0 4px;
+    border-radius: 4px;
+    background-color: rgba(226, 226, 226, 0.9);
+  }
+  &__phaseMinTitle {
+    line-height: 1.5;
+    padding: 20px 0 12px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__photo {
+    margin: 8px 0;
+    border-radius: 4px;
+  }
+  &__descText {
+    padding: 16px 0;
+    font-size: 20px;
+    &.-strong {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  &__onePointText {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 28px;
+  }
+  &__mapPhotoArea {
+    display: flex;
+    justify-content: left;
+    margin-left: -8px;
+  }
+  &__photoList {
+    margin-left: 8px;
+  }
+  &__figureText {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  &__carousel {
+    margin: 24px auto 0;
+    width: 840px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &__carouselArea {
+    display: flex;
+    position: relative;
+    height: 100%;
+    transition: 0.4s;
+  }
+  &__carouselList {
+    .pokeIntroduce__photo {
+      margin: 0 8px 0;
+      width: 840px;
+    }
+  }
+  &__carouselText {
+    padding: 8px;
+    text-align: center;
+  }
+}
+a {
+  color: #668ad8; /*文字色*/
+  text-decoration: none;
+}
+/* ボタンタグの装飾リセット */
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border-radius: 0;
+}
+/*********** スライド送りボタン ***********/
+/* 共有パーツ */
+.arrow-wrap {
+  padding: 4px 0;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arrow-btn {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(113, 135, 245, 0.8);
+  border-radius: 50%;
+  transition: 0.2s;
+  &:focus {
+    box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
+  }
+  &:hover {
+    background-color: rgb(51, 79, 216);
+    box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
+  }
+}
+/* 左 */
+.arrow-left {
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.4s;
+  &:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fefefe;
+    border-left: 2px solid #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%) rotate(-45deg);
+    cursor: pointer;
+  }
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+/* 右 */
+.arrow-right {
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.4s;
+  &:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fefefe;
+    border-left: 2px solid #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%) rotate(135deg);
+    cursor: pointer;
+  }
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
