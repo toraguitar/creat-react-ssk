@@ -19,7 +19,7 @@ function Diff() {
           <h4 className="pokeIntroduce__phaseMinTitle">・これまでの作品</h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width600"
               src="image/gen7.jpeg"
               alt="これまでの御三家"
             />
@@ -35,7 +35,7 @@ function Diff() {
           <h4 className="pokeIntroduce__phaseMinTitle">・今作</h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width600"
               src="image/genAru.jpeg"
               alt="今作の御三家"
             />
@@ -57,17 +57,17 @@ function Diff() {
           <h4 className="pokeIntroduce__phaseMinTitle">・これまでの作品</h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/img_howtoplay02_02.jpeg"
               alt="ポケモンバトル"
             />
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/img_story01_03.jpeg"
               alt="受付にいるスボミー"
             />
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/pokemon_190605_09_02.jpeg"
               alt="アーマーガアが「空飛ぶタクシー」として利用されている"
             />
@@ -83,12 +83,12 @@ function Diff() {
           <h4 className="pokeIntroduce__phaseMinTitle">・今作</h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/FKINQyIVQAE21t1.jpg"
               alt="劇中のセリフ1"
             />
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/pokemonosorosi.jpeg"
               alt="劇中のセリフ2"
             />
@@ -107,21 +107,21 @@ function Diff() {
           <h4 className="pokeIntroduce__phaseMinTitle">・これまでの作品</h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -height200"
               src="image/56519d2f.jpeg"
               alt="ミナモシティ"
             />
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -height200"
               src="image/21817ad8.jpeg"
               alt="俺が一番、世界で強いってことなんだよ！！"
             />
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -height200"
               src="image/show.png"
               alt="剣盾ジムリーダー"
             />
-            <figcaption className="pokeIntroduce__figureText">あああ</figcaption>
+            <figcaption className="pokeIntroduce__figureText"> </figcaption>
           </figure>
           <p className="pokeIntroduce__descText">
             ポケモンを連れて旅をし、ポケモンジムやポケモンリーグへの挑戦、ポケモン図鑑の完成を目指すロールプレイングゲーム。
@@ -134,12 +134,12 @@ function Diff() {
           <h4 className="pokeIntroduce__phaseMinTitle">・今作</h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/20220209-191528-header-696x392.jpeg"
               alt="ポケモンに向かって直接ボールを投げている1"
             />
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/20220128-00000003-isd-000-2-view.jpeg"
               alt="島キングとの戦い"
             />

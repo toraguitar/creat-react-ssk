@@ -21,17 +21,17 @@ function System() {
           </h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/zerda1.jpeg"
               alt=" ブレスオブザワイルドの画像1"
             />
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/zerda2.jpg"
               alt=" ブレスオブザワイルドの画像2"
             />
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width450"
               src="image/zerda3.jpeg"
               alt=" ブレスオブザワイルドの画像3"
             />
@@ -60,7 +60,7 @@ function System() {
           </h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width600"
               src="image/mode_koremade.png"
               alt="モーダルなこれまでのポケモンの画像説明"
             />
@@ -78,7 +78,7 @@ function System() {
           </h4>
           <figure className="pokeIntroduce__photoList">
             <img
-              className="pokeIntroduce__photo"
+              className="pokeIntroduce__photo -width600"
               src="image/mode_aruseus.png"
               alt="モードレスな画面の説明"
             />

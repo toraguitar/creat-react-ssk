@@ -1,5 +1,95 @@
 import React from 'react';
 
+let currentSlide = 0;
+const hiddenClass = 'is-hidden';
+
+const setCarouselWidth = (): void => {
+  const carouselSlide = document.querySelector<HTMLElement>(
+    '.pokeIntroduce__carouselList',
+  );
+  const carouselSlides = document.querySelectorAll(
+    '.pokeIntroduce__carouselList',
+  );
+  const carouselSlideArea = document.querySelector<HTMLElement>(
+    '.pokeIntroduce__carouselArea',
+  );
+  if (
+    carouselSlide === null
+    || carouselSlides.length === 0
+    || carouselSlideArea === null
+  ) return;
+  const slideLength = carouselSlides.length;
+  const slideWidth = carouselSlide.offsetWidth;
+  const slideAreaWidth = slideWidth * slideLength;
+  carouselSlideArea.style.width = `${slideAreaWidth}px`;
+};
+
+const changeSlide = (index: number) => {
+  const carouselSlideArea = document.querySelector<HTMLElement>(
+    '.pokeIntroduce__carouselArea',
+  );
+  const carouselSlide = document.querySelector<HTMLElement>(
+    '.pokeIntroduce__carouselList',
+  );
+  if (carouselSlide === null || carouselSlideArea === null) return;
+  const slideWidth = carouselSlide.offsetWidth;
+  carouselSlideArea.style.transform = `translateX(-${slideWidth * index}px)`;
+  currentSlide = index;
+};
+
+const controlButton = (): void => {
+  const carouselSlides = document.querySelectorAll(
+    '.pokeIntroduce__carouselList',
+  );
+  const carouselButtonPrev = document.querySelector(
+    '[data-slide-carousel="prev"]',
+  );
+  const carouselButtonNext = document.querySelector(
+    '[data-slide-carousel="next"]',
+  );
+  const carouselArrowPrev = document.querySelector('.arrow-left');
+  const carouselArrowNext = document.querySelector('.arrow-right');
+  if (
+    carouselSlides.length === 0
+    || carouselButtonPrev === null
+    || carouselButtonNext === null
+    || carouselArrowPrev === null
+    || carouselArrowNext === null
+  ) return;
+  const slideLength = carouselSlides.length;
+  if (slideLength - 1 === currentSlide) {
+    carouselButtonNext.classList.add(hiddenClass);
+    carouselArrowNext.classList.add(hiddenClass);
+  } else if (currentSlide < slideLength) {
+    carouselButtonNext.classList.remove(hiddenClass);
+    carouselArrowNext.classList.remove(hiddenClass);
+  }
+  if (currentSlide === 0) {
+    carouselButtonPrev.classList.add(hiddenClass);
+    carouselArrowPrev.classList.add(hiddenClass);
+  } else {
+    carouselButtonPrev.classList.remove(hiddenClass);
+    carouselArrowPrev.classList.remove(hiddenClass);
+  }
+};
+
+const setClickButtonPrev = (): void => {
+  changeSlide(currentSlide - 1);
+  controlButton();
+};
+
+const setClickButtonNext = (): void => {
+  changeSlide(currentSlide + 1);
+  controlButton();
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  setCarouselWidth();
+  changeSlide(currentSlide);
+  setClickButtonPrev();
+  setClickButtonNext();
+});
+
 function Last() {
   return (
     <section
@@ -110,11 +200,25 @@ function Last() {
           </li>
         </ul>
         <div className="arrow-wrap">
-          <div className="arrow-left" data-slide-carousel="prev">
-            <button className="arrow-btn btn-prev" type="button"> </button>
+          <div className="arrow-left">
+            <button
+              className="arrow-btn btn-prev"
+              type="button"
+              data-slide-carousel="prev"
+              onClick={setClickButtonPrev}
+            >
+              {' '}
+            </button>
           </div>
-          <div className="arrow-right" data-slide-carousel="next">
-            <button className="arrow-btn btn-next" type="button"> </button>
+          <div className="arrow-right">
+            <button
+              className="arrow-btn btn-next"
+              type="button"
+              data-slide-carousel="next"
+              onClick={setClickButtonNext}
+            >
+              {' '}
+            </button>
           </div>
         </div>
       </div>

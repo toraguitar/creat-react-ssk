@@ -72,6 +72,7 @@
   border-radius: 20px;
   background-color: rgba(241, 241, 241, 0.9);
   background-blend-mode: lighten;
+  opacity: 0;
   -webkit-transition: opacity 1.5s;
   transition: opacity 1.5s;
 }
@@ -111,8 +112,38 @@
 }
 
 .pokeIntroduce__photo {
-  margin: 8px 0;
+  display: inline-block;
+  margin: 8px 2px;
   border-radius: 4px;
+  max-width: none;
+}
+
+.pokeIntroduce__photo.-height200 {
+  height: 200px;
+}
+
+.pokeIntroduce__photo.-height230 {
+  height: 230px;
+}
+
+.pokeIntroduce__photo.-height250 {
+  height: 250px;
+}
+
+.pokeIntroduce__photo.-width600 {
+  width: 600px;
+}
+
+.pokeIntroduce__photo.-width500 {
+  width: 500px;
+}
+
+.pokeIntroduce__photo.-width450 {
+  width: 450px;
+}
+
+.pokeIntroduce__photo.-width300 {
+  width: 300px;
 }
 
 .pokeIntroduce__descText {
@@ -171,6 +202,7 @@
 .pokeIntroduce__carouselList .pokeIntroduce__photo {
   margin: 0 8px 0;
   width: 840px;
+  max-width: none;
 }
 
 .pokeIntroduce__carouselText {
@@ -289,6 +321,16 @@ button {
 }
 
 .arrow-right.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-prev.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-next.is-hidden {
   opacity: 0;
   pointer-events: none;
 }

@@ -9,9 +9,44 @@ import SumUp from './_SumUp/SumUp';
 import Last from './_Last/Last';
 import './css/App.css';
 
+const fadeInClass = 'is-fadeIn';
+
+const fadeInSectionArea = (): void => {
+  const sectionTitles = document.querySelectorAll('[data-fade-trigger]');
+  const sectionOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0,
+  };
+  const sectionCallback = (entries: Array<IntersectionObserverEntry>) => {
+    for (let i = 0; i < entries.length; i += 1) {
+      const entry:IntersectionObserverEntry = entries[i];
+      if (entry.isIntersecting) {
+        const triggerData = entry.target.getAttribute('data-fade-trigger');
+        if (triggerData === null) return;
+        const targetSection = document.querySelector(
+          `[data-fade-target="${triggerData}"]`,
+        );
+        targetSection?.classList.add(fadeInClass);
+      }
+    }
+  };
+  const sectionObserver = new IntersectionObserver(
+    sectionCallback,
+    sectionOptions,
+  );
+  for (let i = 0; i < sectionTitles.length; i += 1) {
+    sectionObserver.observe(sectionTitles[i]);
+  }
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  fadeInSectionArea();
+});
+
 function App() {
   return (
-    <body className="pokeIntroduce">
+    <div className="pokeIntroduce">
       <Title />
       <Menu />
       <Desc />
@@ -20,7 +55,7 @@ function App() {
       <System />
       <SumUp />
       <Last />
-    </body>
+    </div>
   );
 }
 

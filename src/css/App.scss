@@ -61,7 +61,7 @@
     border-radius: 20px;
     background-color: rgba(241, 241, 241, 0.9);
     background-blend-mode: lighten;
-    // opacity: 0;
+    opacity: 0;
     transition: opacity 1.5s;
     &.is-fadeIn {
       opacity: 1;
@@ -94,8 +94,31 @@
     font-weight: 700;
   }
   &__photo {
-    margin: 8px 0;
+    display: inline-block;
+    margin: 8px 2px;
     border-radius: 4px;
+    max-width: none;
+    &.-height200 {
+      height: 200px;
+    }
+    &.-height230 {
+      height: 230px;
+    }
+    &.-height250 {
+      height: 250px;
+    }
+    &.-width600 {
+      width: 600px;
+    }
+    &.-width500 {
+      width: 500px;
+    }
+    &.-width450 {
+      width: 450px;
+    }
+    &.-width300 {
+      width: 300px;
+    }
   }
   &__descText {
     padding: 16px 0;
@@ -139,6 +162,7 @@
     .pokeIntroduce__photo {
       margin: 0 8px 0;
       width: 840px;
+      max-width: none;
     }
   }
   &__carouselText {
@@ -230,6 +254,18 @@ button {
     transform: translate(-70%, -50%) rotate(135deg);
     cursor: pointer;
   }
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.btn-prev {
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.btn-next {
   &.is-hidden {
     opacity: 0;
     pointer-events: none;

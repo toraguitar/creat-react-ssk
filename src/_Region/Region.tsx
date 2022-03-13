@@ -16,7 +16,7 @@ function Region() {
       <div className="pokeIntroduce__mapPhotoArea">
         <figure className="pokeIntroduce__photoList">
           <img
-            className="pokeIntroduce__photo"
+            className="pokeIntroduce__photo -height230"
             src="image/hisui.jpeg"
             alt="ヒスイ地方の画像"
           />
@@ -26,7 +26,7 @@ function Region() {
         </figure>
         <figure className="pokeIntroduce__photoList">
           <img
-            className="pokeIntroduce__photo"
+            className="pokeIntroduce__photo -height230"
             src="../image/Sinnoh.png"
             alt="シンオウ地方の画像"
           />
