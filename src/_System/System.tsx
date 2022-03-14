@@ -34,7 +34,7 @@ function System() {
               alt="マインクラフトの画像"
             />
             <figcaption className="pokeIntroduce__figureText">
-              オープンワールドの代表作「ゼルダの伝説 -ブレスオブザワイルド-」(左)「MineCraft」(右)
+              オープンワールドの代表作「ゼルダの伝説 -ブレスオブザワイルド-」「MineCraft」
             </figcaption>
           </figure>
           <div className="pokeIntroduce__descTextBox">

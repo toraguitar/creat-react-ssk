@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: 20px 0;
   width: 90vw;
-  max-width: 1024px;
+  min-width: 960px;
   font-family: 'Hannari';
 }
 
@@ -121,7 +121,7 @@
 
 .pokeIntroduce__photo {
   display: inline-block;
-  margin: 8px 2px;
+  margin: 8px 0 0 4px;
   border-radius: 4px;
   max-width: none;
 }
@@ -184,11 +184,11 @@
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  margin-left: -8px;
+  margin-left: -4px;
 }
 
 .pokeIntroduce__photoList {
-  margin-left: 8px;
+  margin-left: 4px;
 }
 
 .pokeIntroduce__figureText {
@@ -197,7 +197,7 @@
 }
 
 .pokeIntroduce__carousel {
-  margin: 24px auto 0;
+  margin: 0 auto;
   width: 840px;
   overflow: hidden;
   white-space: nowrap;
@@ -208,14 +208,15 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-left: -8px;
   height: 100%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .pokeIntroduce__carouselList .pokeIntroduce__photo {
-  margin: 0 8px 0;
   width: 840px;
+  margin-left: 8px;
   max-width: none;
 }
 
@@ -359,5 +360,122 @@ button {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+}
+
+@media screen and (max-width: 375px) {
+  .pokeIntroduce {
+    width: 95vw;
+    min-width: unset;
+  }
+  .pokeIntroduce__title {
+    font-size: 32px;
+  }
+  .pokeIntroduce__menuArea {
+    padding: 8px;
+  }
+  .pokeIntroduce__menuTitle {
+    font-size: 24px;
+  }
+  .pokeIntroduce__menuList {
+    padding: 8px;
+  }
+  .pokeIntroduce__subMenu {
+    font-size: 13px;
+  }
+  .pokeIntroduce__subMenuList > li {
+    font-size: 12px;
+  }
+  .pokeIntroduce__sectionArea {
+    margin-top: 32px;
+    padding: 8px;
+  }
+  .pokeIntroduce__phaseTitle {
+    font-size: 32px;
+  }
+  .pokeIntroduce__phaseMidTitle {
+    margin-top: 24px;
+    padding-top: 8px;
+    font-size: 20px;
+  }
+  .pokeIntroduce__phaseMinArea {
+    margin-top: 20px;
+    padding: 0 8px;
+    border-radius: 4px;
+    background-color: rgba(226, 226, 226, 0.9);
+  }
+  .pokeIntroduce__phaseMinTitle {
+    line-height: 1.5;
+    padding: 20px 0 12px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .pokeIntroduce__photo.-height200 {
+    height: unset;
+    width: 80vw;
+  }
+  .pokeIntroduce__photo.-height230 {
+    height: unset;
+    width: 80vw;
+  }
+  .pokeIntroduce__photo.-height250 {
+    height: unset;
+    width: 80vw;
+  }
+  .pokeIntroduce__photo.-width600 {
+    width: 80vw;
+  }
+  .pokeIntroduce__photo.-width500 {
+    width: 80vw;
+  }
+  .pokeIntroduce__photo.-width450 {
+    width: 80vw;
+  }
+  .pokeIntroduce__photo.-width300 {
+    width: 80vw;
+  }
+  .pokeIntroduce__descTextBox {
+    padding: 4px;
+  }
+  .pokeIntroduce__descText {
+    padding: 8px 0;
+    font-size: 16px;
+  }
+  .pokeIntroduce__descText.-strong {
+    font-size: 24px;
+  }
+  .pokeIntroduce__onePointText {
+    margin-top: 8px;
+    font-size: 20px;
+  }
+  .pokeIntroduce__mapPhotoArea {
+    display: block;
+  }
+  .pokeIntroduce__figureText {
+    font-size: 10px;
+  }
+  .pokeIntroduce__carousel {
+    width: 280px;
+  }
+  .pokeIntroduce__carouselList .pokeIntroduce__photo {
+    margin: 0 0 0 8px;
+    width: 280px;
+  }
+  .arrow-btn {
+    width: 30px;
+    height: 30px;
+  }
+  /* 左 */
+  .arrow-left:after {
+    width: 8px;
+    height: 8px;
+  }
+  /* 右 */
+  .arrow-right:after {
+    width: 8px;
+    height: 8px;
+  }
+  .poke-button__backTop {
+    margin: 8px 4px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

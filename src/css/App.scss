@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: 20px 0;
   width: 90vw;
-  max-width: 1024px;
+  min-width: 960px;
   font-family: 'Hannari';
   &__title {
     margin: 16px 0;
@@ -103,7 +103,7 @@
   }
   &__photo {
     display: inline-block;
-    margin: 8px 2px;
+    margin: 8px 0 0 4px;
     border-radius: 4px;
     max-width: none;
     &.-height200 {
@@ -150,17 +150,17 @@
   &__mapPhotoArea {
     display: flex;
     justify-content: left;
-    margin-left: -8px;
+    margin-left: -4px;
   }
   &__photoList {
-    margin-left: 8px;
+    margin-left: 4px;
   }
   &__figureText {
     font-size: 16px;
     line-height: 1.5;
   }
   &__carousel {
-    margin: 24px auto 0;
+    margin: 0 auto;
     width: 840px;
     overflow: hidden;
     white-space: nowrap;
@@ -168,13 +168,14 @@
   &__carouselArea {
     display: flex;
     position: relative;
+    margin-left: -8px;
     height: 100%;
     transition: 0.4s;
   }
   &__carouselList {
     .pokeIntroduce__photo {
-      margin: 0 8px 0;
       width: 840px;
+      margin-left: 8px;
       max-width: none;
     }
   }
@@ -294,5 +295,133 @@ button {
   &__backTop {
     margin: 12px 4px;
     justify-content: right;
+  }
+}
+@media screen and (max-width: 375px) {
+  .pokeIntroduce {
+    width: 95vw;
+    min-width: unset;
+    &__title {
+      font-size: 32px;
+    }
+    &__menuArea {
+      padding: 8px;
+    }
+    &__menuTitle {
+      font-size: 24px;
+    }
+    &__menuList {
+      padding: 8px;
+    }
+    &__subMenu {
+      font-size: 13px;
+    }
+    &__subMenuList {
+      & > li {
+        font-size: 12px;
+      }
+    }
+    &__sectionArea {
+      margin-top: 32px;
+      padding: 8px;
+    }
+    &__phaseTitle {
+      font-size: 32px;
+    }
+    &__phaseMidTitle {
+      margin-top: 24px;
+      padding-top: 8px;
+      font-size: 20px;
+    }
+    &__phaseMinArea {
+      margin-top: 20px;
+      padding: 0 8px;
+      border-radius: 4px;
+      background-color: rgba(226, 226, 226, 0.9);
+    }
+    &__phaseMinTitle {
+      line-height: 1.5;
+      padding: 20px 0 12px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    &__photo {
+      &.-height200 {
+        height: unset;
+        width: 80vw;
+      }
+      &.-height230 {
+        height: unset;
+        width: 80vw;
+      }
+      &.-height250 {
+        height: unset;
+        width: 80vw;
+      }
+      &.-width600 {
+        width: 80vw;
+      }
+      &.-width500 {
+        width: 80vw;
+      }
+      &.-width450 {
+        width: 80vw;
+      }
+      &.-width300 {
+        width: 80vw;
+      }
+    }
+    &__descTextBox {
+      padding: 4px;
+    }
+    &__descText {
+      padding: 8px 0;
+      font-size: 16px;
+      &.-strong {
+        font-size: 24px;
+      }
+    }
+    &__onePointText {
+      margin-top: 8px;
+      font-size: 20px;
+    }
+    &__mapPhotoArea {
+      display: block;
+    }
+    &__figureText {
+      font-size:10px;
+    }
+    &__carousel {
+      width: 280px;
+    }
+    &__carouselList {
+      .pokeIntroduce__photo {
+        margin: 0 0 0 8px;
+        width: 280px;
+      }
+    }
+  }
+  .arrow-btn {
+    width: 30px;
+    height: 30px;
+  }
+  /* 左 */
+  .arrow-left {
+    &:after {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  /* 右 */
+  .arrow-right {
+    &:after {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  .poke-button {
+    &__backTop {
+      margin: 8px 4px;
+    }
   }
 }

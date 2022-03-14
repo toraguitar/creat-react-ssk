@@ -15,10 +15,9 @@ function Desc() {
       </h2>
       <div className="pokeIntroduce__imgArea">
         <img
-          className="pokeIntroduce__photo"
+          className="pokeIntroduce__photo -width600"
           src="image/aruseusPackage.jpeg"
           alt="ポケモンレジェンズアルセウスパッケージ画像"
-          width="600vw"
         />
       </div>
       <p className="pokeIntroduce__descText">
