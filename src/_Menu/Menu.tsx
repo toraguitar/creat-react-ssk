@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  IconButton, List, ListIcon, ListItem,
+} from '@chakra-ui/react';
+import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import { VscCircleFilled } from 'react-icons/vsc';
+import { MdArrowRight } from 'react-icons/md';
 
 const smoothScroll = (): void => {
   const triggerTitleList = document.querySelectorAll(
@@ -35,77 +41,125 @@ function Menu() {
   return (
     <section className="pokeIntroduce__menuArea">
       <h2 className="pokeIntroduce__menuTitle">目次</h2>
-      <ul className="pokeIntroduce__menuList">
-        <li className="pokeIntroduce__subMenu">
-          <button
-            type="button"
-            onClick={smoothScroll}
+      <List
+        className="pokeIntroduce__menuList"
+        spacing={3}
+      >
+        <ListItem className="pokeIntroduce__subMenu">
+          <ListIcon as={VscCircleFilled} color="#2d5770" />
+          <span
             className="pokeIntroduce__subMenuTitle"
-            data-smooth-scroll-trigger="titleDesc"
           >
             「ポケモンLEGENDS アルセウス」とは？
-          </button>
-        </li>
-        <li className="pokeIntroduce__subMenu">
-          <button
-            type="button"
+          </span>
+          <IconButton
+            className="poke-button__scrollTo"
+            aria-label="Search database"
+            icon={<BsFillArrowDownCircleFill />}
+            data-smooth-scroll-trigger="titleDesc"
             onClick={smoothScroll}
+          />
+        </ListItem>
+        <ListItem className="pokeIntroduce__subMenu">
+          <ListIcon as={VscCircleFilled} color="#2d5770" />
+          <span
             className="pokeIntroduce__subMenuTitle"
-            data-smooth-scroll-trigger="region"
           >
             冒険の舞台「ヒスイ地方」
-          </button>
-        </li>
-        <li className="pokeIntroduce__subMenu">
-          <button
-            type="button"
+          </span>
+          <IconButton
+            className="poke-button__scrollTo"
+            aria-label="Search database"
+            icon={<BsFillArrowDownCircleFill />}
+            data-smooth-scroll-trigger="region"
             onClick={smoothScroll}
+          />
+        </ListItem>
+        <ListItem className="pokeIntroduce__subMenu">
+          <ListIcon as={VscCircleFilled} color="#2d5770" />
+          <span
             className="pokeIntroduce__subMenuTitle"
-            data-smooth-scroll-trigger="differences"
           >
             これまでのポケモンシリーズとの違い
-          </button>
-          <ul className="pokeIntroduce__subMenuList">
-            <li>最初に出会えるポケモン</li>
-            <li>ポケモンとの距離感</li>
-            <li>シリーズ初のアクションRPG</li>
-          </ul>
-        </li>
-        <li className="pokeIntroduce__subMenu">
-          <button
-            type="button"
+          </span>
+          <IconButton
+            className="poke-button__scrollTo"
+            aria-label="Search database"
+            icon={<BsFillArrowDownCircleFill />}
+            data-smooth-scroll-trigger="differences"
             onClick={smoothScroll}
+          />
+          <List className="pokeIntroduce__subMenuList">
+            <ListItem>
+              <ListIcon as={MdArrowRight} color="#2d5770" />
+              最初に出会えるポケモン
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdArrowRight} color="#2d5770" />
+              ポケモンとの距離感
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdArrowRight} color="#2d5770" />
+              シリーズ初のアクションRPG
+            </ListItem>
+          </List>
+        </ListItem>
+        <ListItem className="pokeIntroduce__subMenu">
+          <ListIcon as={VscCircleFilled} color="#2d5770" />
+          <span
             className="pokeIntroduce__subMenuTitle"
-            data-smooth-scroll-trigger="system"
           >
             本作のゲームシステムについて
-          </button>
-          <ul className="pokeIntroduce__subMenuList">
-            <li>オープンワールドとは</li>
-            <li>モードの切り替えがスムーズ</li>
-          </ul>
-        </li>
-        <li className="pokeIntroduce__subMenu">
-          <button
-            type="button"
+          </span>
+          <IconButton
+            className="poke-button__scrollTo"
+            aria-label="Search database"
+            icon={<BsFillArrowDownCircleFill />}
+            data-smooth-scroll-trigger="system"
             onClick={smoothScroll}
+          />
+          <List className="pokeIntroduce__subMenuList">
+            <ListItem>
+              <ListIcon as={MdArrowRight} color="#2d5770" />
+              オープンワールドとは
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdArrowRight} color="#2d5770" />
+              モードの切り替えがスムーズ
+            </ListItem>
+          </List>
+        </ListItem>
+        <ListItem className="pokeIntroduce__subMenu">
+          <ListIcon as={VscCircleFilled} color="#2d5770" />
+          <span
             className="pokeIntroduce__subMenuTitle"
-            data-smooth-scroll-trigger="sumUp"
           >
             まとめ
-          </button>
-        </li>
-        <li className="pokeIntroduce__subMenu">
-          <button
-            type="button"
+          </span>
+          <IconButton
+            className="poke-button__scrollTo"
+            aria-label="Search database"
+            icon={<BsFillArrowDownCircleFill />}
+            data-smooth-scroll-trigger="sumUp"
             onClick={smoothScroll}
+          />
+        </ListItem>
+        <ListItem className="pokeIntroduce__subMenu">
+          <ListIcon as={VscCircleFilled} color="#2d5770" />
+          <span
             className="pokeIntroduce__subMenuTitle"
-            data-smooth-scroll-trigger="last"
           >
             最後に
-          </button>
-        </li>
-      </ul>
+          </span>
+          <IconButton
+            className="poke-button__scrollTo"
+            aria-label="Search database"
+            icon={<BsFillArrowDownCircleFill />}
+            data-smooth-scroll-trigger="last"
+            onClick={smoothScroll}
+          />
+        </ListItem>
+      </List>
     </section>
   );
 }

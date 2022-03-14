@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button, Stack } from '@chakra-ui/react';
+import { BiArrowToTop } from 'react-icons/bi';
 import Title from './_Title/Title';
 import Menu from './_Menu/Menu';
 import Desc from './_Desc/Desc';
@@ -40,6 +42,16 @@ const fadeInSectionArea = (): void => {
   }
 };
 
+const backToTop = () => {
+  const targetArea = document.querySelector('[data-back-top="trigger"]');
+  if (targetArea === null) return;
+  const targetTop = targetArea.scrollTop;
+  window.scrollTo({
+    top: targetTop,
+    behavior: 'smooth',
+  });
+};
+
 window.addEventListener('DOMContentLoaded', () => {
   fadeInSectionArea();
 });
@@ -55,6 +67,11 @@ function App() {
       <System />
       <SumUp />
       <Last />
+      <Stack className="poke-button__backTop" direction="row" spacing={4}>
+        <Button rightIcon={<BiArrowToTop />} colorScheme="teal" variant="outline" data-back-top="trigger" onClick={backToTop}>
+          Back to Top
+        </Button>
+      </Stack>
     </div>
   );
 }

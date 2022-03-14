@@ -1,21 +1,27 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/earlyaccess/hannari.css);
-.pokeIntroduce {
-  margin: 0 auto 300px;
-  width: 1024px;
-  font-family: 'Hannari';
+#root {
+  width: auto;
   background-image: url(../image/wallpaper_00012.jpeg);
+}
+
+.pokeIntroduce {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 90vw;
+  font-family: 'Hannari';
 }
 
 .pokeIntroduce__title {
   margin: 16px 0;
-  width: 960px;
   text-align: center;
   font-size: 34px;
+  font-weight: 700;
+  text-shadow: 6px 6px 6px #131313;
   line-height: 1.5;
-  color: #ffffff;
+  color: #f3f3f3;
   border-radius: 10px;
-  background-color: #87cefa;
+  background-color: #6cb9e9;
 }
 
 .pokeIntroduce__title.-min {
@@ -26,7 +32,6 @@
 
 .pokeIntroduce__menuArea {
   padding: 24px 8px;
-  width: 960px;
   line-height: 2;
   font-weight: 700;
   border-radius: 10px;
@@ -42,8 +47,12 @@
 }
 
 .pokeIntroduce__menuList {
-  color: #668ad8;
+  padding: 20px;
+  color: #202020;
   list-style: inside;
+  text-shadow: 6px 6px 6px #e9e9e9;
+  background-color: rgba(110, 110, 110, 0.199);
+  border-radius: 4px;
 }
 
 .pokeIntroduce__subMenu {
@@ -51,13 +60,12 @@
 }
 
 .pokeIntroduce__subMenuTitle {
-  background-color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
 }
 
 .pokeIntroduce__subMenuList {
   padding: 8px 32px;
-  color: #668ad8;
   list-style: circle;
 }
 
@@ -68,7 +76,6 @@
 .pokeIntroduce__sectionArea {
   margin-top: 64px;
   padding: 8px 16px;
-  width: 960px;
   border-radius: 20px;
   background-color: rgba(241, 241, 241, 0.9);
   background-blend-mode: lighten;
@@ -99,7 +106,7 @@
 
 .pokeIntroduce__phaseMinArea {
   margin-top: 20px;
-  padding: 0 4px;
+  padding: 0 8px;
   border-radius: 4px;
   background-color: rgba(226, 226, 226, 0.9);
 }
@@ -146,14 +153,20 @@
   width: 300px;
 }
 
+.pokeIntroduce__descTextBox {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(226, 226, 226, 0.9);
+}
+
 .pokeIntroduce__descText {
   padding: 16px 0;
   font-size: 20px;
 }
 
 .pokeIntroduce__descText.-strong {
-  display: block;
-  font-size: 24px;
+  text-align: center;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -333,5 +346,17 @@ button {
 .btn-next.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.poke-button__scrollTo.css-dn5esd {
+  color: #b8ffce;
+  background: #727272a9;
+}
+
+.poke-button__backTop {
+  margin: 12px 4px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 /*# sourceMappingURL=App.css.map */

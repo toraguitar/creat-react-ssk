@@ -1,3 +1,5 @@
+import { List, ListIcon, ListItem } from '@chakra-ui/react';
+import { IoMdArrowDropright } from 'react-icons/io';
 import React from 'react';
 
 function Diff() {
@@ -13,10 +15,13 @@ function Diff() {
       >
         これまでのポケモンシリーズとの違い
       </h2>
-      <div>
+      <List>
         <h3 className="pokeIntroduce__phaseMidTitle">最初にもらえるポケモン</h3>
         <div className="pokeIntroduce__phaseMinArea">
-          <h4 className="pokeIntroduce__phaseMinTitle">・これまでの作品</h4>
+          <ListItem className="pokeIntroduce__phaseMinTitle">
+            <ListIcon as={IoMdArrowDropright} color="#2d5770" />
+            これまでの作品
+          </ListItem>
           <figure className="pokeIntroduce__photoList">
             <img
               className="pokeIntroduce__photo -width600"
@@ -32,7 +37,10 @@ function Diff() {
           </p>
         </div>
         <div className="pokeIntroduce__phaseMinArea">
-          <h4 className="pokeIntroduce__phaseMinTitle">・今作</h4>
+          <ListItem className="pokeIntroduce__phaseMinTitle">
+            <ListIcon as={IoMdArrowDropright} color="#2d5770" />
+            今作
+          </ListItem>
           <figure className="pokeIntroduce__photoList">
             <img
               className="pokeIntroduce__photo -width600"
@@ -50,11 +58,14 @@ function Diff() {
         <span className="pokeIntroduce__onePointText">
           幅広い世代に懐かしさを感じてもらえるポケモンの設定。
         </span>
-      </div>
-      <div>
+      </List>
+      <List>
         <h3 className="pokeIntroduce__phaseMidTitle">ポケモンとの距離感</h3>
         <div className="pokeIntroduce__phaseMinArea">
-          <h4 className="pokeIntroduce__phaseMinTitle">・これまでの作品</h4>
+          <ListItem className="pokeIntroduce__phaseMinTitle">
+            <ListIcon as={IoMdArrowDropright} color="#2d5770" />
+            これまでの作品
+          </ListItem>
           <figure className="pokeIntroduce__photoList">
             <img
               className="pokeIntroduce__photo -width450"
@@ -80,7 +91,10 @@ function Diff() {
           </p>
         </div>
         <div className="pokeIntroduce__phaseMinArea">
-          <h4 className="pokeIntroduce__phaseMinTitle">・今作</h4>
+          <ListItem className="pokeIntroduce__phaseMinTitle">
+            <ListIcon as={IoMdArrowDropright} color="#2d5770" />
+            今作
+          </ListItem>
           <figure className="pokeIntroduce__photoList">
             <img
               className="pokeIntroduce__photo -width450"
@@ -100,11 +114,14 @@ function Diff() {
             ポケモンと共存するという考え自体が少数派であり、人間とポケモンが一緒に暮らす頃が稀な時代。
           </p>
         </div>
-      </div>
-      <div>
+      </List>
+      <List>
         <h3 className="pokeIntroduce__phaseMidTitle">ゲームシステム</h3>
         <div className="pokeIntroduce__phaseMinArea">
-          <h4 className="pokeIntroduce__phaseMinTitle">・これまでの作品</h4>
+          <ListItem className="pokeIntroduce__phaseMinTitle">
+            <ListIcon as={IoMdArrowDropright} color="#2d5770" />
+            これまでの作品
+          </ListItem>
           <figure className="pokeIntroduce__photoList">
             <img
               className="pokeIntroduce__photo -height200"
@@ -131,7 +148,10 @@ function Diff() {
           </p>
         </div>
         <div className="pokeIntroduce__phaseMinArea">
-          <h4 className="pokeIntroduce__phaseMinTitle">・今作</h4>
+          <ListItem className="pokeIntroduce__phaseMinTitle">
+            <ListIcon as={IoMdArrowDropright} color="#2d5770" />
+            今作
+          </ListItem>
           <figure className="pokeIntroduce__photoList">
             <img
               className="pokeIntroduce__photo -width450"
@@ -163,7 +183,7 @@ function Diff() {
             ポケモン同士を戦わせるなど、これまでにあった要素も健在。
           </p>
         </div>
-      </div>
+      </List>
     </section>
   );
 }
