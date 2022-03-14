@@ -20,7 +20,7 @@ const fadeInSectionArea = (): void => {
   };
   const sectionCallback = (entries: Array<IntersectionObserverEntry>) => {
     for (let i = 0; i < entries.length; i += 1) {
-      const entry:IntersectionObserverEntry = entries[i];
+      const entry: IntersectionObserverEntry = entries[i];
       if (entry.isIntersecting) {
         const triggerData = entry.target.getAttribute('data-fade-trigger');
         if (triggerData === null) return;
